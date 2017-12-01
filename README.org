@@ -1,0 +1,24 @@
+#+TITLE: emacs.d
+
+I needed to rewrite my init away from the monolithic =.emacs= file, of
+which this is an attempt.
+  
+I originally wanted to do an =init.org= version, but shied away when I
+realized most people prefer the monolithic approach. I also didn't
+want to use =org-babel-load-file= which seems slow (plus I don't
+really want to include / depend on =org=). I realize I could have
+written multiple org files so they are self documenting, but I think I
+didn't want to deal with the minimal performance impact. Most of the
+time, I'll have several emacs servers going. I don't want to wait
+*too* long per new instance.
+
+* Organization
+  This is organized such that my =init.el= initiates and loads my
+  =site/= files. It then loads anything under =site-lisp/=, which are
+  lisp files or packages that I installed manually. Further, files
+  stored in =unbp/= are those that I'm currently not using. Finally,
+  =pkgs-%d.%d= is the directory that stores packages themselves.
+
+  If you notice, files have a four-digit integer prefix. This allows
+  files to be loaded in the order I want. Read the README.org under
+  the =site/= directories for more information.
