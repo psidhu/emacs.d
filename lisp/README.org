@@ -1,0 +1,16 @@
+* Directory Organization
+
+  File names are named with the following convention:
+  * 0000-0009: Reserved
+  * 0010-0029: Emacs built-in package settings.
+  * 0030-0049: Built-in Programming modes
+  * 0050-0069: Other built-in modes
+  * 0070-0099: Reserved
+  * 0100-1000: Package configurations
+  * 1000-9999: User customs.
+
+  Note that files in the directory are loaded from lowest numerical
+  starting value to highest. This means that something with 9999 will
+  load after 0001, meaning it has precedence. Doing things this way
+  also allows me to manually take care of any dependencies
+  (hopefully).
