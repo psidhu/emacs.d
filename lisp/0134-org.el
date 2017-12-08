@@ -13,7 +13,6 @@
 
 ;; Install it
 (install-pkg 'org)
-(install-pkg 'org-beautify-theme)
 
 ;; Use it
 
@@ -22,12 +21,6 @@
 (after-load
  'flyspell
  (add-hook 'org-mode-hook 'turn-on-flyspell)
- )
-
-;; Load the proper theme
-(after-load
- 'org
- (load-theme 'org-beautify)
  )
 
 ;; Configure clock-persist
