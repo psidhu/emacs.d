@@ -23,5 +23,5 @@
 (require 'config-packages)
 
 ;; Load rest of init files ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(util/load-directory lisp-d)
 (util/load-directory site-lisp-d)
+(util/load-directory lisp-d)
