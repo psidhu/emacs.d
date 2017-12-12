@@ -9,7 +9,9 @@
 (install-pkg 'idle-highlight-mode)
 
 ;; Use it
-(setq idle-highlight-mode t)
+(define-globalized-minor-mode global-idle-highlight-mode
+  idle-highlight-mode idle-highlight-mode)
+(global-idle-highlight-mode t)
 
 ;; Configure it
 (setq idle-highlight-idle-time 0.2)
