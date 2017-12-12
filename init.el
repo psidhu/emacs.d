@@ -23,5 +23,7 @@
 (require 'config-packages)
 
 ;; Load rest of init files ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq debug-on-error t)
 (util/load-directory site-lisp-d)
 (util/load-directory lisp-d)
+(setq debug-on-error nil)
