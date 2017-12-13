@@ -32,8 +32,12 @@ auto-join channels with your predefined settings."
   )
 
 ;; Configure Logging
+(util/mkdir erc-logs-d)
+(require 'erc-log)
 (setq erc-log-channels t                    ; Enable logging
       erc-log-channels-directory erc-logs-d ; Logs dir
+      erc-save-buffer-on-part t		    ; Save on PART
+      erc-save-queries-on-quit t	    ; Save on QUIT
       )
 
 ;; Configure other settings
