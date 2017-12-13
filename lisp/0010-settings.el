@@ -60,7 +60,7 @@
 
 ;; Configure menu-bar
 (if (eq is-term t)
-    (menu-bar-mode nil)                 ; Turn off if term
+    (menu-bar-mode -1)			; Turn off if term
   (menu-bar-mode t)                     ; Turn on otherwise
   )
 
