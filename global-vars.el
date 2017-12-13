@@ -31,6 +31,7 @@
 ;; ERC logs directory
 (defconst erc-d (expand-file-name "erc" user-emacs-directory))
 (defconst erc-logs-d (concat erc-d "/logs"))
+(defconst erc-auth-f (concat erc-d "/.ercauth.el"))
 
 ;; Default org directory
 (defconst org-d (expand-file-name "org" user-emacs-directory))

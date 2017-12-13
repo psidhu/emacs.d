@@ -6,7 +6,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Configure ERC directory
-(util/mkdir erc-logs-d)
+(util/mkdir erc-d)
+
+;; You can place multiple of the following types of functions into
+;; erc-d/.ercauth.el. Once placed there, you can call them to
+;; auto-join channels with your predefined settings.
+;;
+;; (defun erc/join-example ()
+;;   "Join irc.example.com with my personal credentials"
+;;   (erc :server "irc.example.com" :port 6667 :nick "User" :password "Pass"))
+
+(if (not (file-exists-p erc-auth-f))
+    (message
+     (format "%S\n%S"
+	     "You can place multiple of the following types of functions into
+path erc-d/erc-auth-f. Once placed there, you can call them to
+auto-join channels with your predefined settings."
+
+	     "(defun erc/join-example ()
+\"Join irc.example.com with my personal credentials\"
+
+(interactive)
+(erc :server \"irc.example.com\" :port 6667 :nick \"User\" :password \"Pass\"))"))
+  (load erc-auth-f)
+  )
 
 ;; Configure Logging
 (setq erc-log-channels t                    ; Enable logging
@@ -53,5 +76,24 @@
 	   "0" "*"
 	   erc-session-user-full-name))
   (erc-update-mode-line))
+
+;; HACK: Adding the following two function so erc-sasl can work on
+;; auto-auth
+(defun erc/last-connecting-server-name (server &rest vars)
+  "set variable erc/connecting-to-server to SERVER"
+
+  (setq erc/connecting-to-server (prin1-to-string server))
+  )
+(add-hook 'erc-before-connect 'erc/last-connecting-server-name)
+
+(defun erc-sasl-use-sasl-p ()
+  "Used internally to decide whether SASL should be used in the
+   current session (PATCHED)"
+
+  (if (eq erc-sasl-use-sasl t)
+      (cl-loop for re in erc-sasl-server-regexp-list thereis
+	       (integerp (string-match re erc/connecting-to-server)))
+    )
+  )
 
 (provide '0015-erc.el)
