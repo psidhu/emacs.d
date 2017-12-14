@@ -9,13 +9,12 @@
 (install-pkg 'multiple-cursors)
 
 ;; Custom global key bindings
-(global-set-key (kbd "C-c [") 'mc/edit-lines)
-(global-set-key (kbd "C-c ]") 'mc/edit-ends-of-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c ;") 'mc/mark-all-in-region)
-(global-set-key (kbd "C-c '") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-c g") 'mc/keyboard-quit)
-(global-set-key (kbd "C-c i") 'mc/insert-numbers)
+(global-set-key (kbd "C-c m c g") 'mc/keyboard-quit)
+(global-set-key (kbd "C-c m c l") 'mc/edit-lines)
+(global-set-key (kbd "C-c m c e") 'mc/edit-ends-of-lines)
+(global-set-key (kbd "C-c m c r") 'mc/mark-all-in-region)
+(global-set-key (kbd "C-c m c s") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c m c i n") 'mc/insert-numbers)
+(global-set-key (kbd "C-c m c i l") 'mc/insert-letters)
 
 (provide '0126-multiple-cursors)
