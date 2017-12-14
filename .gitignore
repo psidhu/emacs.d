@@ -1,2 +1,5 @@
 custom/*
 pkgs-*/
+*/.ercauth.el
+session.*
+auto-save-list/
