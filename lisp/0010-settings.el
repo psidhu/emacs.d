@@ -69,4 +69,23 @@
     (tool-bar-mode nil)                 ; Turn off tool-bar in linux
   )
 
+;; Configure keystroke freq.
+(setq echo-keystrokes 0.250)		; Set to 250ms
+
+;; Change gc
+(setq gc-cons-threshold (* 1024 1024))	; Set GC to 1mbit
+
+;; Configure scratch buffer
+(setq initial-scratch-message "")	; Remove scratch buffer message
+
+;; Configure Daemon
+(setq server-use-tcp t)			; Use multiple daemons
+
+;; Configure Dialog Boxes
+(setq use-dialog-box nil)		; Don't use dialog box
+
+;; Configure save-place
+(setq-default save-place t)		; Enable save-place
+(setq save-place-file save-place-f)	; Set saveplace file
+
 (provide '0010-settings)

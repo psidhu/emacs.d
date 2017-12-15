@@ -40,6 +40,9 @@
 (defconst org-d (expand-file-name "org" user-emacs-directory))
 (defconst org-clock-f (concat org-d "/org-clock-save.el"))
 
+;; save-place file
+(defconst save-place-f (concat etc-d "/saveplace"))
+
 ;; Configure OS vars
 (defconst is-linux (eq system-type 'gnu/linux))
 (defconst is-cygwin (eq system-type 'cygwin))
