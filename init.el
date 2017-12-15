@@ -22,6 +22,9 @@
 (util/load-directory config-lisp-d)
 (require 'config-packages)
 
+;; Create etc dir for
+(util/mkdir etc-d)
+
 ;; Load rest of init files ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq debug-on-error t)
 (util/load-directory site-lisp-d)

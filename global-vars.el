@@ -6,6 +6,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Configure Directory Paths
+;; Default etc directory
+(defconst etc-d (expand-file-name "etc" user-emacs-directory))
+
 ;; Configuration files directory
 (defconst config-lisp-d (expand-file-name "config-lisp" user-emacs-directory))
 
