@@ -32,13 +32,15 @@ auto-join channels with your predefined settings."
   )
 
 ;; Configure Logging
-(util/mkdir erc-logs-d)
-(require 'erc-log)
-(setq erc-log-channels t                    ; Enable logging
-      erc-log-channels-directory erc-logs-d ; Logs dir
-      erc-save-buffer-on-part t		    ; Save on PART
-      erc-save-queries-on-quit t	    ; Save on QUIT
-      )
+(after-load
+ 'erc
+ (util/mkdir erc-logs-d)
+ (setq erc-enable-logging t)		      ; Enable logging
+ (setq erc-log-channels-directory erc-logs-d) ; Logs dir
+ (setq erc-save-buffer-on-part t)	      ; Save on PART
+ (setq erc-save-queries-on-quit t)	      ; Save on QUIT
+ )
+(add-hook 'erc-mode-hook 'erc-log-mode)
 
 ;; Configure other settings
 (setq erc-max-buffer-size 60000		    ; Set buffer to 60k
