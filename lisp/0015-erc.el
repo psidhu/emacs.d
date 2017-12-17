@@ -27,7 +27,7 @@ auto-join channels with your predefined settings."
 \"Join irc.example.com with my personal credentials\"
 
 (interactive)
-(erc :server \"irc.example.com\" :port 6667 :nick \"User\" :password \"Pass\"))"))
+(erc-tls :server \"irc.example.com\" :port 6697 :nick \"User\" :password \"Pass\"))"))
   (load erc-auth-f)
   )
 
