@@ -47,6 +47,8 @@ auto-join channels with your predefined settings."
       erc-hide-list '("PART" "QUIT" "JOIN") ; Hide PART messages
       )
 
+(setq erc-join-buffer 'bury)		; Bury new buffers
+
 ;; Turn on certain modes
 (add-hook 'erc-mode-hook 'erc-notifications-mode)
 (add-hook 'erc-mode-hook 'erc-truncate-mode)
