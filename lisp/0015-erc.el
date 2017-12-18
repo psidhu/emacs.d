@@ -43,7 +43,7 @@ auto-join channels with your predefined settings."
 (add-hook 'erc-mode-hook 'erc-log-mode)
 
 ;; Configure other settings
-(setq erc-max-buffer-size 60000		    ; Set buffer to 60k
+(setq erc-max-buffer-size (* 1024 1024)	    ; Set buffer to 1M
       erc-hide-list '("PART" "QUIT" "JOIN") ; Hide PART messages
       )
 
