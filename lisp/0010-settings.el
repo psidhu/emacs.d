@@ -88,7 +88,7 @@
   )
 
 ;; Configure keystroke freq.
-(setq echo-keystrokes 0.250)		; Set to 250ms
+(setq echo-keystrokes 0)		; Set to show immediately
 
 ;; Change gc
 (setq gc-cons-threshold (* 1024 1024))	; Set GC to 1mbit
