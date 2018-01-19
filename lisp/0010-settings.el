@@ -52,11 +52,6 @@
 (column-number-mode t)                  ; Show column
 (which-function-mode t)                 ; Show function in mode line
 
-;; Periodically save recent file list
-(recentf-mode t)
-(setq recentf-max-menu-items (* 1 1024))
-(run-at-time nil (* 5 60) 'recentf-save-list)
-
 ;; Configure searching
 (ido-mode t)                            ; Partial Buffer Search
 (ido-everywhere t)			; Use IDO everywhere
