@@ -7,5 +7,3 @@
 
 ;; Configure compile window
 (setq compilation-window-height 12)
-
-(provide '0030-prog-mode)

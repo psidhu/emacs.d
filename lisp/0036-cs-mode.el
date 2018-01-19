@@ -10,5 +10,3 @@
 
 ;; Use it
 (util/hook-ext-to-mode "cs" 'csharp-mode)
-
-(provide '0036-cs-mode)

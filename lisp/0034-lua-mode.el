@@ -10,5 +10,3 @@
 
 ;; Use it
 (util/hook-ext-to-mode "lua" 'lua-mode)
-
-(provide '0034-lua-mode)

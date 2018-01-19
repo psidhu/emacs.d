@@ -10,5 +10,3 @@
 
 ;; Use it
 (global-undo-tree-mode)			; Replace emacs undo
-
-(provide '0128-undo-tree)

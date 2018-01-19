@@ -15,5 +15,3 @@
 
 ;; Load theme
 (load-theme 'zenburn t)
-
-(provide '0012-theme)

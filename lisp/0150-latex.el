@@ -10,5 +10,3 @@
  'flyspell
  (add-hook 'latex-mode 'turn-on-flyspell)
  )
-
-(provide '0150-latex)

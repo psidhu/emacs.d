@@ -20,5 +20,3 @@
         comment-tags-show-faces t
         comment-tags-lighter nil))
 (add-hook 'prog-mode-hook 'comment-tags-mode)
-
-(provide '0142-comment-tags)

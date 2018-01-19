@@ -10,5 +10,3 @@
 
 ;; Use it
 (require 'markdown-mode)
-
-(provide '0124-markdown)

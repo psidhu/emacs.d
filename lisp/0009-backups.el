@@ -55,5 +55,3 @@
 ;; Add some modes to sensitive mode so backups aren't made
 (util/hook-ext-to-mode "gpg" 'sensitive-mode)
 (util/hook-ext-to-mode "bash_history" 'sensitive-mode)
-
-(provide '0009-backups)

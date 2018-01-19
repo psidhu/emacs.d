@@ -22,5 +22,3 @@
 (global-set-key (kbd "C-c j") 'semantic-complete-jump-local)
 (global-set-key (kbd "C-c C-j") 'semantic-complete-jump)
 (global-set-key (kbd "C-c b") 'pop-global-mark)
-
-(provide '0020-semantic)

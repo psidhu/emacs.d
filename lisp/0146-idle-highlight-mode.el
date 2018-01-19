@@ -15,5 +15,3 @@
 
 ;; Configure it
 (setq idle-highlight-idle-time 0.2)
-
-(provide '0146-idle-highlight-mode)

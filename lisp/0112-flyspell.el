@@ -7,5 +7,3 @@
 
 ;; Install it
 (install-pkg 'flyspell)
-
-(provide '0112-flyspell)

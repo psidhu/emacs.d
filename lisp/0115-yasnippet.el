@@ -13,5 +13,3 @@
 
 ;; Configure it
 (yas-global-mode t)			; Use everywhere
-
-(provide '0115-yasnippet)

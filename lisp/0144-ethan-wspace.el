@@ -12,5 +12,3 @@
 (add-hook 'prog-mode-hook 'ethan-wspace-mode)
 (setq require-final-newline nil)
 (setq mode-require-final-newline nil)
-
-(provide '0144-ethan-wspace)

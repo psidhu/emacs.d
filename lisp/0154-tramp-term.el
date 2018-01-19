@@ -7,5 +7,3 @@
 
 ;; Install it
 (install-pkg 'tramp-term)
-
-(provide '0154-tramp-term)

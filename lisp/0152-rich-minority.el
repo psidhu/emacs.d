@@ -12,5 +12,3 @@
 (require 'rich-minority)
 (rich-minority-mode t)
 (setf rm-blacklist "")
-
-(provide '0152-rich-minority)

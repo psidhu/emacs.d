@@ -7,5 +7,3 @@
 
 ;; Install it
 (install-pkg 'lice)
-
-(provide '0148-lice)

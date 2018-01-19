@@ -10,5 +10,3 @@
 
 ;; Use it
 (require 'dash)
-
-(provide '0110-dash)

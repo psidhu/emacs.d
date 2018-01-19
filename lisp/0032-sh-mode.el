@@ -11,5 +11,3 @@
 
 (util/hook-ext-to-mode "bb" 'sh-mode)	    ; OpenEmbedded
 (util/hook-ext-to-mode "bbappend" 'sh-mode) ; OpenEmbedded
-
-(provide '0032-sh-mode)

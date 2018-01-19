@@ -19,5 +19,3 @@
  #'(lambda ()
      (autopair-mode nil))
  )
-
-(provide '0122-autopair)

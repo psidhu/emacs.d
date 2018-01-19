@@ -29,5 +29,3 @@
 (org-clock-persistence-insinuate)
 
 (setq org-src-fontify-natively t)
-
-(provide '0134-org)

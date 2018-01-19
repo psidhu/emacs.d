@@ -7,5 +7,3 @@
 
 ;; Set default c mode
 (setq c-default-style "linux")
-
-(provide '0031-c-mode)

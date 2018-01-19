@@ -11,5 +11,3 @@
 ;; Use it
 (global-set-key (kbd "C-c e v i l p") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c e v i l m") 'evil-numbers/dec-at-pt)
-
-(provide '0140-evil-numbers)

@@ -10,5 +10,3 @@
 
 ;; Use it
 (require 'dts-mode)
-
-(provide '0138-dts)

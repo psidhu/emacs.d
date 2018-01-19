@@ -10,5 +10,3 @@
 
 ;; Use it
 (require 'vlf-setup)
-
-(provide '0158-vlf)

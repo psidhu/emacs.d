@@ -78,5 +78,3 @@
    (add-hook 'after-init-hook 'company-web-html)
    )
   )
-
-(provide '0120-company)

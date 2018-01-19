@@ -7,5 +7,3 @@
 
 ;; Install it
 (install-pkg 'windresize)
-
-(provide '0156-windresize)

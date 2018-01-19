@@ -103,5 +103,3 @@ auto-join channels with your predefined settings."
 	       (integerp (string-match re erc/connecting-to-server)))
     )
   )
-
-(provide '0015-erc.el)
