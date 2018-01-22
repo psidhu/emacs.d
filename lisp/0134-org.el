@@ -17,6 +17,12 @@
 ;; Use it
 
 ;; Configure it
+;; Set agenda directory to org-lyfe if it exists
+(if (file-exists-p org-lyfe-d)
+    ;; Not recursive
+    (setq org-agenda-files `(,org-lyfe-d))
+  )
+
 ;; Use flyspell check in org
 (after-load
  'flyspell

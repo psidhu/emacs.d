@@ -40,6 +40,18 @@
 (defconst org-d (expand-file-name "org" user-emacs-directory))
 (defconst org-clock-f (concat org-d "/org-clock-save.el"))
 
+;; CUSTOM: Change this to your directory of choice for your regular
+;; agenda / todo files. I call my repo of org notes / agenda
+;; "org-lyfe", hence the var name. Note that my org-lyfe is structured
+;; as the following:
+;; org-lyfe/
+;;   todo.org -> todo/todo.org (SYMLINK)
+;;   work-todo.org -> todo/<datecode>_work_todo.org (SYMLINK)
+;;   notes/
+;;     foo.org
+;;     bar.org
+(defconst org-lyfe-d (expand-file-name "~/org-lyfe"))
+
 ;; save-place file
 (defconst save-place-f (concat etc-d "/saveplace"))
 
