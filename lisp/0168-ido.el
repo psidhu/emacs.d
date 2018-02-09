@@ -22,6 +22,7 @@
 ;; Use ido-vertical-mode
 (when (try-install-pkg 'ido-vertical-mode)
   (ido-vertical-mode t)
+  (setq ido-vertical-define-keys 'C-n-and-C-p-only) ; change keys
   (setq ido-vertical-show-count t)		    ; Show hits
   )
 
