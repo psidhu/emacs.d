@@ -13,6 +13,23 @@
 (setq ido-enable-flex-matching t)	; Use fuzzy match
 (setq ido-case-fold t)			; Ignore case
 
+;; Use flx-ido for better fuzzy searching
+(when (try-install-pkg 'flx-ido)
+  (flx-ido-mode t)
+  (setq ido-use-faces nil)		; use flx-ido-use-faces instead
+  )
+
+;; Use ido-vertical-mode
+(when (try-install-pkg 'ido-vertical-mode)
+  (ido-vertical-mode t)
+  (setq ido-vertical-show-count t)		    ; Show hits
+  )
+
+;; Use ido-ubiquitous-mode
+(when (try-install-pkg 'ido-completing-read+)
+  (ido-ubiquitous-mode t)
+  )
+
 (setq ido-use-virtual-buffers 'auto)	; Auto use virtual buffers
 (defun settings/add-to-ido-work-file-list ()
   "https://emacs.stackexchange.com/questions/26812/
