@@ -55,6 +55,12 @@
 ;; save-place file
 (defconst save-place-f (concat etc-d "/saveplace"))
 
+;; ido.last
+(defconst ido-f (concat etc-d "/ido.last"))
+
+;; recentf files
+(defconst recentf-f (concat etc-d "/recentf"))
+
 ;; Configure OS vars
 (defconst is-linux (eq system-type 'gnu/linux))
 (defconst is-cygwin (eq system-type 'cygwin))
