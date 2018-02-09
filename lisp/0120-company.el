@@ -27,6 +27,12 @@
  (add-to-list 'company-backends 'company-yasnippet)
  )
 
+;; Use company-flx
+(when (try-install-pkg 'company-flx)
+  (with-eval-after-load 'company
+    (company-flx-mode +1))
+  )
+
 ;; Configure and install company add-ons
 (when (try-install-pkg 'company-quickhelp) ; quickhelp
   (add-hook 'after-init-hook 'company-quickhelp-mode)
