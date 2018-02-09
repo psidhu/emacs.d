@@ -10,10 +10,17 @@
 
 ;; Periodically save recent file list
 (recentf-mode t)
-(setq recentf-max-menu-items (* 2 1024))
-(run-at-time nil (* 5 60) 'recentf-save-list)
-
-(setq recentf-auto-cleanup (* 1 90))	; Run auto-cleanup every 90s
+(setq
+ recentf-save-file recentf-f
+ recentf-max-menu-items 255
+ recentf-auto-cleanup 'never
+ )
 
 ;; Use sync recentf
 (require 'sync-recentf)
+
+;; Inhibit recentf-save-list spanning my messages
+(run-at-time 0 (* 1 60)
+             (lambda ()
+               (let ((inhibit-message t))
+                 (sync-recentf-save-list))))
