@@ -21,6 +21,8 @@
  (define-key company-active-map (kbd "C-p") 'company-select-previous)
  (setq-default company-dabbrev-other-buffers 'all
 	       company-tooltip-align-annotations t
+	       company-idle-delay 0.25
+	       company-begin-commands '(self-insert-command)
 	       )
  (add-to-list 'company-backends 'company-yasnippet)
  )
@@ -74,7 +76,12 @@
 
 (when (try-install-pkg 'company-web)    ; web
   (after-load
-   'company
-   (add-hook 'after-init-hook 'company-web-html)
-   )
+      'company
+    (add-hook
+     'web-mode-hook
+     (lambda ()
+       (set (make-local-variable 'company-backends) '(company-web-html))
+       )
+     )
+    )
   )
