@@ -70,7 +70,7 @@
 (setq echo-keystrokes 0)		; Set to show immediately
 
 ;; Change gc
-(setq gc-cons-threshold (* 1024 1024))	; Set GC to 1mbit
+(setq gc-cons-threshold (* 20 (* 1024 1024)))	; Set GC to 20mb
 
 ;; Configure scratch buffer
 (setq initial-scratch-message "")	; Remove scratch buffer message
