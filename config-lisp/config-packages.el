@@ -72,5 +72,3 @@
      )
     )
   )
-
-(provide 'config-packages)

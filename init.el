@@ -20,7 +20,6 @@
 (util/lgv)
 
 (util/load-directory config-lisp-d)
-(require 'config-packages)
 
 ;; Create etc dir for
 (util/mkdir etc-d)
