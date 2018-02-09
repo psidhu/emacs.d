@@ -47,7 +47,8 @@
   what version to install. If REFRESH is t, it will refresh
   package contents in order before installing"
 
-  (if (package-installed-p pn min-version) nil
+  (if (package-installed-p pn min-version)
+      t					; Return t
     (if (eq refresh t)
         (progn
           (package-refresh-contents)
@@ -67,7 +68,7 @@
       (install-pkg pn min-version refresh)
     (error
      (message "Can't install %s: %S" pn err)
-     nil
+     nil				; return nil
      )
     )
   )
