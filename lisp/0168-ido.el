@@ -6,6 +6,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Use it
+;; change location of file
+(setq ido-save-directory-list-file ido-f)
+
 (ido-mode t)                            ; Partial Buffer Search
 
 ;; Configure searching
