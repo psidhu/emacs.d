@@ -9,8 +9,8 @@
 (semantic-mode t)
 
 ;; Configure it
-(global-semantic-idle-breadcrumbs-mode t) ; Takes 4 seconds to init emacs
 (global-semanticdb-minor-mode t)          ; global support for Semanticdb
+(global-semantic-idle-breadcrumbs-mode t) ; breadcumb
 (global-semantic-highlight-func-mode t)   ; global highlight of firstsline for
 (global-semantic-idle-scheduler-mode t)	  ; run in idle
 (global-semantic-idle-completions-mode t) ; idle parsing of source code

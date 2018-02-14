@@ -46,7 +46,6 @@
 ;; Configure grep command
 (setq grep-command "grep -nHri ")       ; I generally
 
-
 ;; Configure Mode Line
 (line-number-mode t)                    ; Show line numbers
 (column-number-mode t)                  ; Show column
