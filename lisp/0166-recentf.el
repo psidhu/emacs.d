@@ -13,6 +13,7 @@
 (setq
  recentf-save-file recentf-f
  recentf-max-menu-items 255
+ recentf-max-saved-items nil
  recentf-auto-cleanup 'never
  )
 
@@ -23,4 +24,4 @@
 (run-at-time 0 (* 1 60)
              (lambda ()
                (let ((inhibit-message t))
-                 (sync-recentf-save-list))))
+                 (recentf-cleanup))))
