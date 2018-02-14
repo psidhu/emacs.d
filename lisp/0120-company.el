@@ -21,11 +21,23 @@
  (define-key company-active-map (kbd "C-p") 'company-select-previous)
  (setq-default company-dabbrev-other-buffers 'all
 	       company-tooltip-align-annotations t
-	       company-idle-delay 0.25
+	       company-idle-delay 0
 	       company-begin-commands '(self-insert-command)
 	       )
+
+ ;; add built-in backends
  (add-to-list 'company-backends 'company-yasnippet)
+ (add-to-list 'company-backends 'company-ispell)
+ (add-to-list 'company-backends 'company-gtags)
  )
+
+;; Use company-irony
+(when (try-install-pkg 'company-irony)
+  (after-load
+      'company
+    (add-to-list 'company-backends 'company-irony)
+    )
+  )
 
 ;; Use company-flx
 (when (try-install-pkg 'company-flx)
