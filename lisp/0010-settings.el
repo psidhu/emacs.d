@@ -16,6 +16,7 @@
 
 ;; Configure Title Name
 (setq frame-title-format "%b")		; Set to buffer name
+(setq icon-title-format "%b")		; Set to buffer name
 
 ;; Configure battery indicator
 (display-battery-mode t)		; Mostly work on laptops
