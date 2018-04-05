@@ -39,6 +39,13 @@
     )
   )
 
+(when (try-install-pkg 'company-irony-c-headers)
+  (after-load
+      'company
+    (add-to-list 'company-backends 'company-irony-c-headers)
+    )
+  )
+
 ;; Use company-flx
 (when (try-install-pkg 'company-flx)
   (with-eval-after-load 'company
