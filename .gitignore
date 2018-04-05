@@ -3,3 +3,13 @@ pkgs-*/
 */.ercauth.el
 session.*
 auto-save-list/
+.mc-lists.el
+backups/
+erc/
+etc/
+irony/
+network-security.data
+company-statistics-cache.el
+org/
+semanticdb/
+server/
