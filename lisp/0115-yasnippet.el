@@ -8,6 +8,9 @@
 ;; Install it
 (install-pkg 'yasnippet)
 
+;; Install templates
+(install-pkg 'yasnippet-snippets)
+
 ;; Use it
 (require 'yasnippet)
 
