@@ -15,6 +15,12 @@
 ;; Use it
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; Use popup-tip extension
+(when (try-install-pkg 'flycheck-popup-tip)
+  (after-load 'flycheck
+    (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
+    )
+  )
 ;; Configure it
 (setq
  ;; parse buffer 3s after a change
