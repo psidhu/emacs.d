@@ -40,6 +40,9 @@
 (defconst org-d (expand-file-name "org" user-emacs-directory))
 (defconst org-clock-f (concat org-d "/org-clock-save.el"))
 
+;; Default undo-tree directory
+(defconst undo-tree-d (concat etc-d "/undo-tree"))
+
 ;; CUSTOM: Change this to your directory of choice for your regular
 ;; agenda / todo files. I call my repo of org notes / agenda
 ;; "org-lyfe", hence the var name. Note that my org-lyfe is structured
