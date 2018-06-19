@@ -53,11 +53,6 @@ auto-join channels with your predefined settings."
 (add-hook 'erc-mode-hook 'erc-notifications-mode)
 (add-hook 'erc-mode-hook 'erc-truncate-mode)
 
-(after-load
- 'flyspell
- (erc-spelling-enable t)
- )
-
 ;; SASL support
 (require 'erc-sasl)
 (add-to-list 'erc-sasl-server-regexp-list "irc\\.freenode\\.net")
