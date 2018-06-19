@@ -15,6 +15,13 @@
 ;; Use it
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; Use irony extension
+(when (try-install-pkg 'flycheck-irony)
+  (after-load 'flycheck
+    (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
+    )
+  )
+
 ;; Use popup-tip extension
 (when (try-install-pkg 'flycheck-popup-tip)
   (after-load 'flycheck
