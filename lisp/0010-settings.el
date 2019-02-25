@@ -45,7 +45,7 @@
 (setq scroll-conservatively 101)        ; Stop annoying bounce scrolling
 
 ;; Configure grep command
-(setq grep-command "grep -nHri ")       ; I generally
+(setq grep-command "grep --color=auto -nHri ") ; General use case grep
 
 ;; Configure Mode Line
 (line-number-mode t)                    ; Show line numbers
