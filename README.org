@@ -22,3 +22,33 @@ time, I'll have several emacs servers going. I don't want to wait
   If you notice, files have a four-digit integer prefix. This allows
   files to be loaded in the order I want. Read the README.org under
   the =site/= directories for more information.
+
+* Setup
+
+  1. Clone
+  #+BEGIN_SRC sh
+  git clone git.yadev.io/emacs.d.git ~/.emacs.d
+  #+END_SRC
+  
+  2. Open Emacs
+  #+BEGIN_SRC sh
+  emacs &
+  # wait for emacs to get done installing packages etc
+  #+END_SRC
+
+  3. Restart Emacs and begin using
+
+** Irony
+  If you wish to use irony (code completion), install the following on your system:
+  
+  Linux:
+  #+BEGIN_SRC sh
+  apt install libclang-dev global
+  #+END_SRC
+
+  After installation is complete, install the server and you're done.
+  #+BEGIN_SRC sh
+  M-x irony-install-server
+  #+END_SRC
+  
+** ERC
