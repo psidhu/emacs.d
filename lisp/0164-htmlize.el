@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configure htmlize                                                         ;;
 ;;                                                                           ;;
-;; Author: Pushpal Sidhu <psidhu.devel@gmail.com                             ;;
+;; Author: Pushpal Sidhu <psidhu.devel@gmail.com>                            ;;
 ;; Date: 20180111                                                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

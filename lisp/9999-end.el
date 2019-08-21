@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Message that lisp files were all loaded in this directory                 ;;
 ;;                                                                           ;;
-;; Author: Pushpal Sidhu <psidhu.devel@gmail.com                             ;;
+;; Author: Pushpal Sidhu <psidhu.devel@gmail.com>                            ;;
 ;; Date: 20180124                                                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

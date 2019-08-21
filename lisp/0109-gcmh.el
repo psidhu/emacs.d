@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GCMH                                                                      ;;
 ;;                                                                           ;;
-;; Author: Pushpal Sidhu <psidhu.devel@gmail.com                             ;;
+;; Author: Pushpal Sidhu <psidhu.devel@gmail.com>                            ;;
 ;; Date: 20190503                                                            ;;
 ;; Notes: This is Koral's garbage collector magic hack                       ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

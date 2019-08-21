@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configure yasnippet package                                               ;;
 ;;                                                                           ;;
-;; Author: Pushpal Sidhu <psidhu.devel@gmail.com                             ;;
+;; Author: Pushpal Sidhu <psidhu.devel@gmail.com>                            ;;
 ;; Date: 20171130                                                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
