@@ -16,3 +16,6 @@
 (global-set-key (kbd "C-c m c s") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-c m c i n") 'mc/insert-numbers)
 (global-set-key (kbd "C-c m c i l") 'mc/insert-letters)
+
+;; Set list file location
+(setq mc/list-file mc-list-f)
