@@ -14,22 +14,22 @@ time, I'll have several emacs servers going. I don't want to wait
 
 * Organization
   This is organized such that my =init.el= initiates and loads my
-  =site/= files. It then loads anything under =site-lisp/=, which are
+  =lisp/= files. It then loads anything under =site-lisp/=, which are
   lisp files or packages that I installed manually. Further, files
   stored in =unbp/= are those that I'm currently not using. Finally,
   =pkgs-%d.%d= is the directory that stores packages themselves.
 
   If you notice, files have a four-digit integer prefix. This allows
   files to be loaded in the order I want. Read the README.org under
-  the =site/= directories for more information.
+  the =lisp/= directories for more information.
 
 * Setup
 
   1. Clone
   #+BEGIN_SRC sh
-  git clone git.yadev.io/emacs.d.git ~/.emacs.d
+    # TODO
   #+END_SRC
-  
+
   2. Open Emacs
   #+BEGIN_SRC sh
   emacs &
@@ -47,8 +47,30 @@ time, I'll have several emacs servers going. I don't want to wait
   #+END_SRC
 
   After installation is complete, install the server and you're done.
-  #+BEGIN_SRC sh
+  #+BEGIN_SRC lisp
   M-x irony-install-server
   #+END_SRC
   
 ** ERC
+To store erc information, I use the =erc/.ercauth.el= file. It may contain things like:
+
+#+BEGIN_SRC lisp
+(defun erc/join-ssl-freenode ()
+  "Join irc.freenode.net with my personal credentials"
+
+  (interactive)
+  (setq erc-autojoin-channels-alist
+	'(("freenode.net" "#emacs")))
+
+  (erc-tls :server "irc.freenode.net" :port 6697
+	   :nick "MY_NICK" :password "MY_COOL_LONG_PASSWORD"))
+
+(defun erc/join-freenode ()
+  "Join irc.freenode.net with my personal credentials"
+
+  (interactive)
+  (erc :server "irc.freenode.net" :port 6667
+	   :nick "MY_NICK" :password "MY_COOL_LONG_PASSWORD"))
+#+END_SRC
+
+This file may contain several defun's for various servers etc.
