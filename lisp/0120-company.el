@@ -95,6 +95,7 @@
 (when (try-install-pkg 'company-statistics) ; statistics
   (after-load
    'company
+   (setq company-statistics-file company-stat-f)
    (add-hook 'after-init-hook 'company-statistics-mode)
    )
   )
