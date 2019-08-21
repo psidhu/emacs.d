@@ -64,6 +64,12 @@
 ;; recentf files
 (defconst recentf-f (concat etc-d "/recentf"))
 
+;; company statistics file
+(defconst company-stat-f (concat etc-d "/company-statistics-cache.el"))
+
+;; mc list file
+(defconst mc-list-f (concat etc-d "/mc-lists.el"))
+
 ;; Configure OS vars
 (defconst is-linux (eq system-type 'gnu/linux))
 (defconst is-cygwin (eq system-type 'cygwin))
