@@ -21,6 +21,19 @@
   (require 'global-vars)
 )
 
+(defun util/compile-directory (dir)
+  "Compile files in directory DIR if req'd"
+  (byte-recompile-directory (expand-file-name dir) 0)
+  )
+
+(defun util/load-elc-directory (dir)
+  "Loads elc files in directory DIR"
+
+  (let ((load-it (lambda (f)
+                   (load-file (concat (file-name-as-directory dir) f)))
+                 ))
+    (mapc load-it (directory-files dir nil "\\.elc$"))))
+
 (defun util/load-directory (dir)
   "Loads files in directory DIR"
 
