@@ -19,13 +19,18 @@
 (require 'init-utils)
 (util/lgv)
 
-(util/load-directory config-lisp-d)
+;; Load config lisp directory
+(util/compile-directory config-lisp-d)
+(util/load-elc-directory config-lisp-d)
 
 ;; Create etc dir for
 (util/mkdir etc-d)
 
 ;; Load rest of init files ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq debug-on-error t)
-(util/load-directory site-lisp-d)
-(util/load-directory lisp-d)
+(util/compile-directory site-lisp-d)
+(util/load-elc-directory site-lisp-d)
+
+(util/compile-directory lisp-d)
+(util/load-elc-directory lisp-d)
 (setq debug-on-error nil)
