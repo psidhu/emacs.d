@@ -9,7 +9,7 @@
 (install-pkg 'company)
 
 ;; Use it
-(require 'company)
+(company-mode t)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Configure keys

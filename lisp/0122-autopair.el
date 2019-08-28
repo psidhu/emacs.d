@@ -8,9 +8,6 @@
 ;; Install it
 (install-pkg 'autopair)
 
-;; Use it
-(require 'autopair)
-
 ;; Configure it
 (autopair-global-mode t)
 

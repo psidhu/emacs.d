@@ -7,6 +7,3 @@
 
 ;; Install it
 (install-pkg 'vlf)
-
-;; Use it
-(require 'vlf-setup)

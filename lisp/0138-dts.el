@@ -7,6 +7,3 @@
 
 ;; Install it
 (install-pkg 'dts-mode)
-
-;; Use it
-(require 'dts-mode)

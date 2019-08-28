@@ -17,9 +17,6 @@
  recentf-auto-cleanup 'never
  )
 
-;; Use sync recentf
-(require 'sync-recentf)
-
 ;; Inhibit recentf-save-list spanning my messages
 (run-at-time 0 (* 1 60)
              (lambda ()

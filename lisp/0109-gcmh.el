@@ -10,7 +10,6 @@
 (install-pkg 'gcmh)
 
 ;; Use it
-(require 'gcmh)
 (gcmh-mode t)
 
 ;; Set limits

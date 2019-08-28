@@ -8,9 +8,6 @@
 ;; Install it
 (install-pkg 'string-inflection)
 
-;; Use it
-(require 'string-inflection)
-
 ;; Configure it
 (after-load 'string-inflection
   (global-set-key (kbd "C-c s i") 'string-inflection-all-cycle)

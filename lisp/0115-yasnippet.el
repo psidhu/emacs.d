@@ -11,8 +11,5 @@
 ;; Install templates
 (install-pkg 'yasnippet-snippets)
 
-;; Use it
-(require 'yasnippet)
-
 ;; Configure it
 (yas-global-mode t)			; Use everywhere

@@ -8,9 +8,6 @@
 ;; Install it
 (install-pkg 'comment-tags)
 
-;; Use it
-(require 'comment-tags)
-
 ;; Configure it
 (setq comment-tags-keymap-prefix (kbd "C-c t"))
 (with-eval-after-load "comment-tags"
