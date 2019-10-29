@@ -14,3 +14,4 @@ org/
 semanticdb/
 server/
 *.elc
+elpa/
