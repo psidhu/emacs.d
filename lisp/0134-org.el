@@ -23,12 +23,6 @@
     (setq org-agenda-files `(,org-lyfe-d))
   )
 
-;; Use flyspell check in org
-(after-load
- 'flyspell
- (add-hook 'org-mode-hook 'turn-on-flyspell)
- )
-
 ;; Configure clock-persist
 (setq org-clock-persist 'history
       org-clock-persist-file org-clock-f)
