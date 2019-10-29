@@ -28,6 +28,15 @@
     (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
     )
   )
+
+;; Use rust extension
+(when (try-install-pkg 'flycheck-rust)
+  (after-load 'flycheck
+    (with-eval-after-load 'rust-mode
+      (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+    )
+  )
+
 ;; Configure it
 (setq
  ;; parse buffer 3s after a change
