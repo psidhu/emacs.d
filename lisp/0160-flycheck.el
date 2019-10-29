@@ -34,3 +34,6 @@
  flycheck-check-syntax-automatically '(mode-enabled idle-change)
  flycheck-idle-change-delay '3
  )
+
+(message
+ "make sure to: sudo apt install clang cppcheck pylint # and other linters")
