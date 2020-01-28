@@ -63,7 +63,7 @@
 
 ;; Configure tool-bar
 (if (eq is-linux t)
-    (tool-bar-mode nil)                 ; Turn off tool-bar in linux
+    (tool-bar-mode -1)                 ; Turn off tool-bar in linux
   )
 
 ;; Configure keystroke freq.
