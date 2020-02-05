@@ -84,3 +84,6 @@
 ;; Configure save-place
 (setq-default save-place t)		; Enable save-place
 (setq save-place-file save-place-f)	; Set saveplace file
+
+;; Use electric-pair-mode (apparently added in emacs 24.4)
+(electric-pair-mode t)
