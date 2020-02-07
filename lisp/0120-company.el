@@ -40,6 +40,8 @@
 ;; Configure and install company add-ons
 (when (try-install-pkg 'company-quickhelp) ; quickhelp
   (add-hook 'after-init-hook 'company-quickhelp-mode)
+  (after-load 'company-quickhelp
+    (setq company-quickhelp-delay 0.1))
   )
 
 (when (try-install-pkg 'company-statistics) ; statistics
