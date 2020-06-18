@@ -17,3 +17,6 @@
 
 ;; Use it
 (sml/setup)
+
+;; Customize it some more
+(add-to-list 'sml/replacer-regexp-list '("^~/src/" ":SRC:") t)
