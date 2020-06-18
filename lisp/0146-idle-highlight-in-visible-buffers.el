@@ -9,7 +9,7 @@
 (install-pkg 'idle-highlight-in-visible-buffers-mode)
 
 ;; Use it
-;; (add-hook 'after-init-hook 'idle-highlight-in-visible-buffers-mode)
+(add-hook 'after-init-hook 'idle-highlight-in-visible-buffers-mode)
 ;; (add-hook 'prog-mode-hook 'idle-highlight-in-visible-buffers-mode)
 
 ;; Configure it
