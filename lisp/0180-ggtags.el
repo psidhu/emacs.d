@@ -20,4 +20,5 @@
   (setq ggtags-use-idutils t)
   (setq ggtags-sort-by-nearness t)
   (setq ggtags-oversize-limit (* ggtags-oversize-limit 10))
+  (setq-local eldoc-documentation-function #'ggtags-eldoc-function)
   )
