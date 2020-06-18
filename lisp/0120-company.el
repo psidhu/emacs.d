@@ -67,7 +67,8 @@
 		(lambda ()
 		  (set (make-local-variable 'company-backends)
 		       '((company-irony-c-headers company-irony
-			  company-yasnippet company-keywords)))))
+			  company-yasnippet company-keywords
+			  company-gtags)))))
       )
     )
   )
@@ -107,8 +108,7 @@
     (add-hook 'shell-mode-hook
 	      (lambda ()
 		(set (make-local-variable 'company-backends)
-		     '((company-shell company-shell-env
-		        company-yasnippet company-keywords)))))
+		     '(company-shell company-shell-env))))
     )
   )
 
