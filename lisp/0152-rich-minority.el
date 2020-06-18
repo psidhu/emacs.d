@@ -9,6 +9,7 @@
 (install-pkg 'rich-minority)
 
 ;; Use it
-(require 'rich-minority)
 (rich-minority-mode t)
-(setf rm-blacklist "")
+(setq rm-whitelist "Ovwrt")
+;; (add-to-list 'rm-whitelist '"Ovwrt" t)
+;; (add-to-list 'rm-whitelist '" GG" t)
