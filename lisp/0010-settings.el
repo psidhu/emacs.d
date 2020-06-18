@@ -82,8 +82,12 @@
 (setq use-dialog-box nil)		; Don't use dialog box
 
 ;; Configure save-place
-(setq-default save-place t)		; Enable save-place
 (setq save-place-file save-place-f)	; Set saveplace file
+(save-place-mode 1)			; Enable save-place
 
 ;; Use electric-pair-mode (apparently added in emacs 24.4)
 (electric-pair-mode t)
+
+;; Use winner (C-c left and C-c right undoes and redoes window configs)
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
