@@ -74,6 +74,7 @@
 (defconst is-linux (eq system-type 'gnu/linux))
 (defconst is-cygwin (eq system-type 'cygwin))
 (defconst is-windows (memq system-type '(windows-nt ms-dos)))
+(defconst is-macos (eq system-type 'darwin))
 
 ;; Check whether we're in an xwindow or not
 (defconst is-term (eq window-system 'nil))
