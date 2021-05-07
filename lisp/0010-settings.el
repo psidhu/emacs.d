@@ -91,3 +91,7 @@
 ;; Use winner (C-c left and C-c right undoes and redoes window configs)
 (when (fboundp 'winner-mode)
   (winner-mode 1))
+
+;; If mac, use option as meta
+(if (eq is-macos t)
+    (setq mac-option-modifier 'meta))
