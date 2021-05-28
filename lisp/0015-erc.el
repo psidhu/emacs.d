@@ -55,7 +55,7 @@ auto-join channels with your predefined settings."
 
 ;; SASL support
 (require 'erc-sasl)
-(add-to-list 'erc-sasl-server-regexp-list "irc\\.freenode\\.net")
+(add-to-list 'erc-sasl-server-regexp-list "irc\\.libera\\.chat")
 
 ;; https://github.com/john2x/emacs.d/blob/master/init.org
 (defun erc-login ()

@@ -28,7 +28,7 @@
 ;; (require 'erc-sasl)
 ;;
 ;; (add-to-list 'erc-sasl-server-regexp-list "host\\.server\\.com")
-;; e.g. irc\\.freenode\\.net, or .* for any host
+;; e.g. irc\\.libera\\.chat, or .* for any host
 ;;
 ;; To disable:
 ;; (setq erc-sasl-use-sasl nil)

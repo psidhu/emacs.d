@@ -55,21 +55,21 @@ time, I'll have several emacs servers going. I don't want to wait
 To store erc information, I use the =erc/.ercauth.el= file. It may contain things like:
 
 #+BEGIN_SRC lisp
-(defun erc/join-ssl-freenode ()
-  "Join irc.freenode.net with my personal credentials"
+(defun erc/join-ssl-libera ()
+  "Join irc.libera.chat with my personal credentials"
 
   (interactive)
   (setq erc-autojoin-channels-alist
-	'(("freenode.net" "#emacs")))
+	'(("libera.chat" "#emacs")))
 
-  (erc-tls :server "irc.freenode.net" :port 6697
+  (erc-tls :server "irc.libera.chat" :port 6697
 	   :nick "MY_NICK" :password "MY_COOL_LONG_PASSWORD"))
 
-(defun erc/join-freenode ()
-  "Join irc.freenode.net with my personal credentials"
+(defun erc/join-libera ()
+  "Join irc.libera.chat with my personal credentials"
 
   (interactive)
-  (erc :server "irc.freenode.net" :port 6667
+  (erc :server "irc.libera.chat" :port 6667
 	   :nick "MY_NICK" :password "MY_COOL_LONG_PASSWORD"))
 #+END_SRC
 
