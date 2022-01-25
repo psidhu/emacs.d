@@ -6,4 +6,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set default c mode
-(setq c-default-style "linux")
+(add-hook 'c-mode-hook
+	  '(lambda()
+	     (c-set-style "linux")
+	     (prog/infer-indentation-style)
+	     ))
