@@ -16,8 +16,8 @@
 (global-undo-tree-mode)			; Replace emacs undo
 
 ;; Customize it
-;; (after-load 'undo-tree
-;;   (setq undo-tree-history-directory-alist (list `("" . ,undo-tree-d)))
-;;   (setq-default undo-tree-auto-save-history t
-;;   		undo-tree-visualizer-diff t)
-;;   )
+(after-load 'undo-tree
+  (setq undo-tree-history-directory-alist (list `("" . ,undo-tree-d)))
+  (setq-default undo-tree-auto-save-history nil
+		undo-tree-visualizer-diff t)
+  )
