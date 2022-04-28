@@ -14,6 +14,9 @@
 ;; Stop startup screen
 (setq inhibit-startup-screen t)
 
+;; Confirm on kill
+(setq confirm-kill-emacs 'yes-or-no-p)
+
 ;; Configure Title Name
 (setq frame-title-format "%b")		; Set to buffer name
 (setq icon-title-format "%b")		; Set to buffer name
