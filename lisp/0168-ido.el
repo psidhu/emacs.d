@@ -35,11 +35,11 @@
   )
 
 (setq ido-use-virtual-buffers 'auto)	; Auto use virtual buffers
-(defun settings/add-to-ido-work-file-list ()
+(defun ido/add-to-ido-work-file-list ()
   "https://emacs.stackexchange.com/questions/26812/
    configuring-the-number-of-buffers-saved-by-ido-using
    -ido-use-virtual-buffers"
 
   (ido-record-work-file (file-name-nondirectory (buffer-file-name)))
   (ido-record-work-directory (file-name-directory (buffer-file-name))))
-(add-hook 'find-file-hook 'settings/add-to-ido-work-file-list)
+(add-hook 'find-file-hook 'ido/add-to-ido-work-file-list)
