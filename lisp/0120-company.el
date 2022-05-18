@@ -129,3 +129,12 @@
 		     '((company-web-html company-yasnippet company-keywords)))))
     )
   )
+
+(when (try-install-pkg 'company-glsl)    ; glsl
+  (after-load 'company
+    (add-hook 'glsl-mode-hook
+	      (lambda ()
+		(set (make-local-variable 'company-backends)
+		     '((company-glsl company-yasnippet company-keywords)))))
+    )
+  )
