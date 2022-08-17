@@ -11,6 +11,7 @@
 ;; Customize it
 (setq sml/shorten-directory t)
 (setq sml/name-width '(1 . 44))
+(setq sml/mode-width 'full)
 
 (setq sml/show-client t)
 (setq sml/vc-mode-show-backend t)
