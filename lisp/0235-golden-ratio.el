@@ -12,4 +12,7 @@
 (golden-ratio-mode t)
 
 ;; Configure it
-(setq golden-ratio-auto-scale t)
+
+;; See https://github.com/roman/golden-ratio.el/issues/74
+;; (setq golden-ratio-auto-scale t)
+(setq window-combination-resize t)
