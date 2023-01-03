@@ -8,8 +8,10 @@
 ;; Install company
 (install-pkg 'company)
 
+;; Install company-fuzzy (must load after setting company-backends)
+(try-install-pkg 'company-fuzzy)
+
 ;; Use it
-(company-mode t)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Configure keys
@@ -23,18 +25,6 @@
 		company-idle-delay 0
 		company-begin-commands '(self-insert-command)
 		)
-
-  ;; Hard set default company
-  (setq company-backends
-	'((company-files company-keywords company-capf company-yasnippet)
-	  (company-abbrev company-dabbrev)
-	  ))
-  )
-
-;; Use company-flx
-(when (try-install-pkg 'company-flx)
-  (with-eval-after-load 'company
-    (company-flx-mode +1))
   )
 
 ;; Configure and install company add-ons
@@ -65,10 +55,14 @@
     (after-load 'company
       (add-hook 'irony-mode-hook
 		(lambda ()
-		  (set (make-local-variable 'company-backends)
-		       '((company-irony-c-headers company-irony
-			  company-yasnippet company-keywords
-			  company-gtags)))))
+		  (setq-local company-backends
+			      '((company-capf
+				 company-irony company-irony-c-headers company-clang
+				 :with
+				 company-dabbrev-code company-gtags company-yasnippet
+				 company-dabbrev company-keywords company-files)))
+		  )
+		)
       )
     )
   )
@@ -91,10 +85,16 @@
 
 (when (try-install-pkg 'company-lua)    ; lua
   (after-load 'company
-    (add-hook 'irony-mode-hook
+    (add-hook 'lua-mode-hook
 	      (lambda ()
-		(set (make-local-variable 'company-backends)
-		     '((company-lua company-yasnippet company-keywords)))))
+		(setq-local company-backends
+			    '((company-capf
+			       company-lua
+			       :with
+			       company-dabbrev-code company-gtags company-yasnippet
+			       company-dabbrev company-keywords company-files)))
+		)
+	      )
     )
   )
 
@@ -104,7 +104,7 @@
 	      (lambda ()
 		(set (make-local-variable 'company-backends)
 		     '(company-shell company-shell-env
-		       company-yasnippet company-keywords))))
+				     company-yasnippet company-keywords))))
     (add-hook 'shell-mode-hook
 	      (lambda ()
 		(set (make-local-variable 'company-backends)
@@ -116,8 +116,14 @@
   (after-load 'company
     (add-hook 'python-mode-hook
 	      (lambda ()
-		(set (make-local-variable 'company-backends)
-		     '((company-anaconda company-yasnippet company-keywords)))))
+		(setq-local company-backends
+			    '((company-capf
+			       company-anaconda
+			       :with
+			       company-dabbrev-code company-gtags company-yasnippet
+			       company-dabbrev company-keywords company-files)))
+		)
+	      )
     )
   )
 
@@ -125,8 +131,14 @@
   (after-load 'company
     (add-hook 'web-mode-hook
 	      (lambda ()
-		(set (make-local-variable 'company-backends)
-		     '((company-web-html company-yasnippet company-keywords)))))
+		(setq-local company-backends
+			    '((company-capf
+			       company-web-html
+			       :with
+			       company-dabbrev-code company-gtags company-yasnippet
+			       company-dabbrev company-keywords company-files)))
+		)
+	      )
     )
   )
 
@@ -134,7 +146,13 @@
   (after-load 'company
     (add-hook 'glsl-mode-hook
 	      (lambda ()
-		(set (make-local-variable 'company-backends)
-		     '((company-glsl company-yasnippet company-keywords)))))
+		(setq-local company-backends
+			    '((company-capf
+			       company-glsl
+			       :with
+			       company-gtags company-yasnippet
+			       company-dabbrev company-keywords company-files)))
+		)
+	      )
     )
   )
