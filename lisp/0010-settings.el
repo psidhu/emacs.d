@@ -21,9 +21,6 @@
 (setq frame-title-format "%b")		; Set to buffer name
 (setq icon-title-format "%b")		; Set to buffer name
 
-;; Configure battery indicator
-(display-battery-mode t)		; Mostly work on laptops
-
 ;; Configure Parens
 (show-paren-mode t)
 (setq show-paren-delay 0		; Show immediately
