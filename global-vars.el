@@ -45,15 +45,15 @@
 
 ;; CUSTOM: Change this to your directory of choice for your regular
 ;; agenda / todo files. I call my repo of org notes / agenda
-;; "org-lyfe", hence the var name. Note that my org-lyfe is structured
+;; "notes", hence the var name. Note that my org-lyfe is structured
 ;; as the following:
-;; org-lyfe/
+;; notes/
 ;;   todo.org -> todo/todo.org (SYMLINK)
 ;;   work-todo.org -> todo/<datecode>_work_todo.org (SYMLINK)
 ;;   notes/
 ;;     foo.org
 ;;     bar.org
-(defconst org-lyfe-d (expand-file-name "~/org-lyfe"))
+(defconst org-lyfe-d (expand-file-name "~/notes"))
 
 ;; save-place file
 (defconst save-place-f (concat etc-d "/saveplace"))
