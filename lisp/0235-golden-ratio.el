@@ -9,7 +9,7 @@
 (install-pkg 'golden-ratio)
 
 ;; Use it
-(golden-ratio-mode t)
+(golden-ratio-mode -1)
 
 ;; Configure it
 
