@@ -9,8 +9,15 @@
 ;;(setq compilation-scroll-output 'first-error)
 (setq compilation-window-height 10)
 
+(defvar my/auto-hide-compile-buffer-delay 2)
+(defvar my/compilation-exit-code 0)
+
+(defun my/compilation-exit-message-function (status_ code msg)
+  (setq my/compilation-exit-code code)
+  (cons msg code))
+
 ;; https://stackoverflow.com/questions/11043004/emacs-compile-buffer-auto-close
-(defun hide-compile-buffer-if-successful (buffer string)
+(defun my/hide-compile-buffer-if-successful (buffer string)
   (unless
       (string= (buffer-name buffer) "*compilation*")
     (error "not compilation buffer, won't auto-close")
@@ -23,18 +30,19 @@
       (with-current-buffer buffer
         (setq warnings (eval compilation-num-warnings-found))
         (setq warnings-str (concat " (Warnings: " (number-to-string warnings) ")"))
-        (setq errors (eval compilation-num-errors-found))
+        ;; (setq errors (eval compilation-num-errors-found))
+	(setq errors my/compilation-exit-code)
 
         (if (eq errors 0) nil t)
 	)
 
       ;;If Errors then
-      (message (concat "Compiled with Errors" warnings-str time-str))
+      (message (concat "Compiled with Errors" " (exit code: " (number-to-string my/compilation-exit-code) ") " time-str))
 
     ;;If Compiled Successfully or with Warnings then
     (progn
       (bury-buffer buffer)
-      (run-with-timer auto-hide-compile-buffer-delay nil 'delete-window (get-buffer-window buffer 'visible))
+      (run-with-timer my/auto-hide-compile-buffer-delay nil 'delete-window (get-buffer-window buffer 'visible))
       (message (concat "Compiled Successfully" warnings-str time-str))
       )
     )
@@ -42,15 +50,11 @@
 
 (make-variable-buffer-local 'compilation-start-time)
 
-(defun compilation-started (proc)
+(defun my/compilation-started (proc)
+  (setq my/compilation-exit-code "0")
   (setq compilation-start-time (current-time))
   )
 
-(defcustom auto-hide-compile-buffer-delay 2
-  "Time in seconds before auto hiding compile buffer."
-  :group 'compilation
-  :type 'number
-  )
-
-(add-hook 'compilation-start-hook 'compilation-started)
-(add-hook 'compilation-finish-functions 'hide-compile-buffer-if-successful)
+(setq compilation-exit-message-function 'my/compilation-exit-message-function)
+(add-hook 'compilation-start-hook 'my/compilation-started)
+(add-hook 'compilation-finish-functions 'my/hide-compile-buffer-if-successful)
