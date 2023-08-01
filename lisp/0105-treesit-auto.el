@@ -12,4 +12,8 @@
 (install-pkg 'treesit-auto)
 
 ;; Use it
+;; treesit-auto doesn't have autoloads so have to require it
+(require 'treesit-auto)
+
 (setq treesit-auto-install 'prompt)
+(global-treesit-auto-mode)
