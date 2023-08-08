@@ -10,9 +10,12 @@
 
 ;; Use it only if global is installed on system
 (if (executable-find "global")
-    (add-hook 'c-mode-common-hook
+    (add-hook 'c-ts-mode-hook
 	      (lambda ()
-		(when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+		(when (derived-mode-p 'c-ts-mode 'c++-ts-mode
+				      'java-ts-mode 'asm-ts-mode
+				      'c-mode 'c++-mode
+				      'java-mode 'asm-mode)
 		  (ggtags-mode 1))))
   )
 

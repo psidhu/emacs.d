@@ -8,6 +8,12 @@
 ;; Set default c mode
 (add-hook 'c-mode-hook
 	  '(lambda()
-	     (c-set-style "linux")
+	     (c-set-style #'linux)
+	     (prog/infer-indentation-style)
+	     ))
+
+(add-hook 'c-ts-mode-hook
+	  '(lambda()
+	     (c-ts-mode-set-style #'linux)
 	     (prog/infer-indentation-style)
 	     ))
