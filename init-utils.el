@@ -68,4 +68,11 @@
     )
   )
 
+(defun util/add-multi-hook (hooks fn)
+  "Adds multiple hooks to a single function"
+  (mapc (lambda (hook)
+	  (add-hook hook fn))
+	hooks)
+  )
+
 (provide 'init-utils)

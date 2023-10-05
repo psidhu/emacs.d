@@ -6,14 +6,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set default c mode
-(add-hook 'c-mode-hook
-	  '(lambda()
-	     (c-set-style #'linux)
-	     (prog/infer-indentation-style)
-	     ))
-
-(add-hook 'c-ts-mode-hook
-	  '(lambda()
-	     (c-ts-mode-set-style #'linux)
-	     (prog/infer-indentation-style)
-	     ))
+(util/add-multi-hook
+ '(c-mode-hook c-ts-mode-hook)
+ '(lambda()
+    (c-set-style #'linux)
+    (prog/infer-indentation-style)
+    ))

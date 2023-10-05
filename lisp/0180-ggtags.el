@@ -10,7 +10,7 @@
 
 ;; Use it only if global is installed on system
 (if (executable-find "global")
-    (add-hook 'c-ts-mode-hook
+    (util/add-multi-hook '(c-mode-hook c-ts-mode-hook)
 	      (lambda ()
 		(when (derived-mode-p 'c-ts-mode 'c++-ts-mode
 				      'java-ts-mode 'asm-ts-mode

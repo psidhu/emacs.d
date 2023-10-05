@@ -6,18 +6,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set default c++ mode
-(add-hook 'c++-mode-hook
-	  '(lambda()
-	     (c-set-style "ellemtel")
-	     (setq c-basic-offset 2)
-	     (setq indent-tabs-mode nil)
-	     (prog/infer-indentation-style)
-	     ))
-
-(add-hook 'c++-ts-mode-hook
-	  '(lambda()
-	     (c-ts-mode-set-style "ellemtel")
-	     (setq c-basic-offset 2)
-	     (setq indent-tabs-mode nil)
-	     (prog/infer-indentation-style)
-	     ))
+(util/add-multi-hook
+ '(c++-mode-hook c++-ts-mode-hook)
+ '(lambda()
+    (c-set-style "ellemtel")
+    (setq c-basic-offset 2)
+    (setq indent-tabs-mode nil)
+    (prog/infer-indentation-style)
+    ))
