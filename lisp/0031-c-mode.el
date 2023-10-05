@@ -6,9 +6,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set default c mode
-(util/add-multi-hook
- '(c-mode-hook c-ts-mode-hook)
- '(lambda()
-    (c-set-style #'linux)
-    (prog/infer-indentation-style)
-    ))
+(add-hook 'c-mode-hook
+	  '(lambda()
+	     (c-set-style #'linux)
+	     (setq c-basic-offset 2)
+	     (prog/infer-indentation-style)
+	     ))
+
+(add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))

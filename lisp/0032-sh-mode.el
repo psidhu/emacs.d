@@ -11,3 +11,5 @@
 
 (util/hook-ext-to-mode "bb" 'sh-mode)	    ; OpenEmbedded
 (util/hook-ext-to-mode "bbappend" 'sh-mode) ; OpenEmbedded
+
+(add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
