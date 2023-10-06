@@ -30,17 +30,17 @@
   "Loads elc files in directory DIR"
 
   (let ((load-it (lambda (f)
-                   (load-file (concat (file-name-as-directory dir) f)))
-                 ))
-    (mapc load-it (directory-files dir nil "\\.elc$"))))
+                   (load-file f)))
+                 )
+    (mapc load-it (directory-files-recursively dir "\\.elc$"))))
 
 (defun util/load-directory (dir)
   "Loads files in directory DIR"
 
   (let ((load-it (lambda (f)
-                   (load-file (concat (file-name-as-directory dir) f)))
-                 ))
-    (mapc load-it (directory-files dir nil "\\.el$"))))
+                   (load-file f)))
+                 )
+    (mapc load-it (directory-files-recursively dir "\\.el$"))))
 
 (defun util/mkdir (dir)
   "Checks whether directory DIR exists. If not, create it and
