@@ -27,6 +27,10 @@
 		)
   )
 
+(when (try-install-pkg 'company-box) ; quickhelp
+  (add-hook 'company-mode-hook 'company-box-mode)
+  )
+
 ;; Configure and install company add-ons
 (when (try-install-pkg 'company-quickhelp) ; quickhelp
   (add-hook 'after-init-hook 'company-quickhelp-mode)
