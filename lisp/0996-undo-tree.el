@@ -13,6 +13,7 @@
 (util/mkdir undo-tree-d)
 
 ;; Use it
+(require 'undo-tree)
 (global-undo-tree-mode)			; Replace emacs undo
 
 ;; Customize it
