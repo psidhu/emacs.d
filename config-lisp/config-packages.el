@@ -10,6 +10,7 @@
 (let ((default-directory pkgs-d))
   (normal-top-level-add-subdirs-to-load-path))
 (setq package-user-dir pkgs-d)
+(setq package-install-upgrade-built-in t)
 
 ;; Use emacs package manager
 (require 'package)
