@@ -12,4 +12,4 @@
 (add-hook 'python-mode-hook 'anaconda-mode)
 (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 
-(add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
+;; (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
