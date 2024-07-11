@@ -7,3 +7,6 @@
 
 ;; Install it
 (install-pkg 'editorconfig)
+
+;; Use it
+(editorconfig-mode 1)
