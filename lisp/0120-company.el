@@ -160,3 +160,18 @@
 	      )
     )
   )
+
+(when (try-install-pkg 'company-org-block)  ; anaconda
+  (after-load 'company
+    (add-hook 'org-mode-hook
+	      (lambda ()
+		(setq-local company-backends
+			    '((company-capf
+			       company-org-block
+			       :with
+			       company-dabbrev-code company-gtags company-yasnippet
+			       company-dabbrev company-keywords company-files)))
+		)
+	      )
+    )
+  )
