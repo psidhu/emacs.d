@@ -29,6 +29,12 @@
     )
   )
 
+(when (try-install-pkg 'flycheck-checkpatch)
+  (eval-after-load 'flycheck
+    '(flycheck-checkpatch-setup)
+    )
+  )
+
 ;; Use rust extension
 (when (try-install-pkg 'flycheck-rust)
     (with-eval-after-load 'rust-mode
