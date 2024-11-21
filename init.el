@@ -28,6 +28,11 @@
 
 ;; Load rest of init files ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq debug-on-error t)
+
+;; Install some common req's
+(install-pkg 'dash)
+(install-pkg 'f)
+
 (util/compile-directory site-lisp-d)
 (util/load-elc-directory site-lisp-d)
 
