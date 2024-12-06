@@ -13,3 +13,6 @@
         (tab-count (how-many "^\t" (point-min) (point-max))))
     (if (> space-count tab-count) (setq indent-tabs-mode nil))
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
+
+;; Set global mode to default to no tabs
+(setq indent-tabs-mode nil)
