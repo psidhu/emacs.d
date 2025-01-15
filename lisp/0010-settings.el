@@ -95,3 +95,5 @@
 ;; If mac, use option as meta
 (if (eq is-macos t)
     (setq mac-option-modifier 'meta))
+
+(setq-default indent-tabs-mode nil)	; Use spaces for tabs
