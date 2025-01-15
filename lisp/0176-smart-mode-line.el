@@ -12,7 +12,7 @@
 (setq sml/shorten-directory t)
 (setq sml/shorten-modes t)
 (setq sml/name-width '(1 . 40))
-(setq sml/mode-width)
+(setq sml/mode-width 'full)
 
 (setq sml/show-client t)
 (setq sml/vc-mode-show-backend t)
